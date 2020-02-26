@@ -48,6 +48,6 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
   
-  return result
+  return result #original default blank method had a nil here. why? I replaced it with return result
   
 end
