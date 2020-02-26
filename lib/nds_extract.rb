@@ -16,9 +16,9 @@ def directors_totals(nds)
   #the result will be a simple hash
   
   main_array_index = 0
-  total = 0
+  
   while main_array_index < nds.count do
-    
+    total = 0
     movie_index = 0
     
     while movie_index < nds[main_array_index][:movies].count do
