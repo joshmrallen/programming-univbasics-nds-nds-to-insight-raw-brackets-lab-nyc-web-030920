@@ -18,7 +18,7 @@ def directors_totals(nds)
   main_array_index = 0
   
   while main_array_index < nds.count do
-    total = 0
+    total = 0 #must be called inside the first while loop so that it resets for each director
     movie_index = 0
     
     while movie_index < nds[main_array_index][:movies].count do
