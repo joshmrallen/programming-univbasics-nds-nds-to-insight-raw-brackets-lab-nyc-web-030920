@@ -16,8 +16,22 @@ def directors_totals(nds)
   #the result will be a simple hash
   
   main_array_index = 0
+  total = 0
   while main_array_index < nds.count do
-    result.push(nds[main_array_index][:name])
+    
+    movie_index = 0
+    
+    while movie_index < nds[main_array_index][:movies].count do
+      
+        total = total + nds[main_array_index][:movies][movie_index][:worldwide_gross]
+    
+        movie_index += 1
+    end
+    
+    #interpolate the :name to create the name as a key that's a string in result
+    result["#{nds[main_array_index][:name]}"] = total
+    
+    main_array_index += 1
   end
   
   
